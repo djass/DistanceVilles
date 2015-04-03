@@ -69,7 +69,7 @@
 		    for (var i = 0; i < origins.length; i++) {
 		      var results = response.rows[i].elements; 	      
 		      for (var j = 0; j < results.length; j++) {
-		        villes.km =  results[j].saveDistance.text;
+		        villes.km =  results[j].distance.text;
 		    	villes.saveInTable();	
 		      }
 		    }
@@ -90,7 +90,7 @@
 				$.each(JsonCP, function(idx1, obj1) { 
 					cp2 = obj1.ville_code_postal;  
 					villes.setCP(cp1, cp2);
-		   			villes.distance();
+		   			villes.saveDistance();
 				});
 			});
 		}
